@@ -209,10 +209,11 @@ android {
 dependencies {
     // dependencies for app building
     implementation 'androidx.multidex:multidex:2.0.1'
-//    implementation project('nextcloud-android-library')
-    implementation ("com.github.nextcloud:android-library:$androidLibraryVersion") {
+    // implementation project('nextcloud-android-library')
+    implementation ("com.github.Ju-Brn:nextcloud-android-library:$androidLibraryVersion") {
         exclude group: 'org.ogce', module: 'xpp3' // unused in Android and brings wrong Junit version
     }
+    implementation 'com.github.Ju-Brn:InteractiveKeyManager:0.1'
 
     compileOnly 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2' // remove after entire switch to lib v2
     implementation "commons-httpclient:commons-httpclient:3.1@jar" // remove after entire switch to lib v2
